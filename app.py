@@ -46,15 +46,36 @@ if uploaded_file is not None:
         st.success(f"File uploaded successfully: {uploaded_file.name}")
 
         csv_filepath = extract_text_pdf(file_path, OUTPUT_FOLDER)
-        st.success(f"Text extracted successfully to: {csv_filepath}")
 
         with open(csv_filepath, "rb") as f:
             csv_data = f.read()
-        st.download_button(
-            label="Download Extracted CSV",
-            data=csv_data,
-            file_name="extracted_data.csv",
-            mime="text/csv"
-        )
     else:
         st.error("Unsupported file type. Please upload a valid file.")
+
+st.divider()
+st.subheader("Your Notes")
+st.caption("All your uploaded files are considered as notes and classified with tags.")
+files = os.listdir(UPLOAD_FOLDER)
+
+if files:
+    for i in range(0, len(files), 4):
+        cols = st.columns(4)
+        for col, file_name in zip(cols, files[i:i+6]):
+            file_path = os.path.join(UPLOAD_FOLDER, file_name)
+            csv_filepath = os.path.join(OUTPUT_FOLDER, file_name)
+
+            with col:
+                st.image("/Users/zafiraibraeva/Code/uni coding/nlp-project/static/note_logo.png", width=40)
+                st.write(file_name)
+
+                with st.expander("•••", expanded=False):
+                    if st.button(f"Download {file_name}", key=f"download_{file_name}"):
+                        st.download_button(label=f"Download",
+                                           data=open(file_path, "rb").read(),
+                                           file_name=f"{file_name}")
+                    if st.button(f"Delete {file_name}", key=f"delete_{file_name}"):
+                        os.remove(file_path)
+                        if os.path.exists(csv_filepath):
+                            os.remove(csv_filepath)
+else:
+    st.info("No files uploaded")
