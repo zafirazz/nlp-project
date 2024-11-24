@@ -1,593 +1,661 @@
 Page Number,Content
-Page 1,"==== C:/Users/Kassem Anis/OneDrive - Debreceni
-Egyetem/Asztal/HPOTest/videos/D4001.mp4 ====
-understanding the basics and tools is only part of the battle a robust security
-plan involves the strategy of searching for vulnerabilities addressing them
-before any attackers do and planning for any interruptions to critical business
-functions in this domain we will cover identifying vulnerabilities managing risk
-and developing disaster recovery and business continuity plans vulnerability
-management is an ongoing process in which organisations proactively identify
-vulnerabilities document discovered vulnerabilities make decisions on how to
-handle those vulnerabilities and what order implement responses to mitigate
-the most important vulnerabilities and monitor how effective deploy responses
-are managing vulnerabilities is always more effective and less costly than
-dealing with the consequences of successful attacks the first step in
-vulnerability management is to identify vulnerabilities that exist in an
-environment the first step in vulnerability identification is to collect
-comprehensive descriptive information about an environments hardware and
-software components a comprehensive inventory is made up of descriptive
-information for each component including detailed version information once a
-comprehensive inventory has been compiled each component can be
-compared against lists and databases of known vulnerabilities to identify
-intersections that indicate a vulnerability exists for one or more deploy
-components food fresh knows that good cybersecurity builds customer Trust
-so their it organisation implemented a change control process that documents
-all configuration changes to their it infrastructure they are confident that their
-software and hardware Inventories stay up to date but they still scanned verify
-periodically and stay current on the latest vulnerabilities the fact that a
-vulnerability exists for a diploid component does not necessarily mean that an
-attack is imminent for a vulnerability to be exploited there must be an external
-threat that is realised against that specific vulnerability the main purpose of
-vulnerability management is to reduce and organisations attack surface by
-mitigating as many vulnerabilities as possible within budgetary constraints as
-a result of organisations operating with limited budgets the best approach to
-implementing vulnerability mitigations is to qualitatively and or quantitatively
-assess the relative impact of each discovered vulnerability and apply budget
-to vulnerabilities deemed most damaging once the organisation decides which
-vulnerabilities will be mitigated the goal is to reduce the opportunity for an
-attacker to successfully exploit a vulnerability and carry out an attack
-mitigating a vulnerability does not always mean removing that vulnerability it
-means to make it less dangerous to the organization the last step in
+Page 1,"In Ictu Oculi: Exposing AI Generated Fake Face
+Videos by Detecting Eye Blinking
+Yuezun Li, Ming-Ching Chang and Siwei Lyu
+Computer Science Department, University at Albany, SUNY
+Abstract—The new developments in deep generative networks
+have signiﬁcantly improve the quality and efﬁciency in generating
+realistically-looking fake face videos. In this work, we describe a
+new method to expose fake face videos generated with neural
+networks. Our method is based on detection of eye blinking
+in the videos, which is a physiological signal that is not well
+presented in the synthesized fake videos. Our method is tested
+over benchmarks of eye-blinking detection datasets and also
+show promising performance on detecting videos generated with
+DeepFake.
+Index Terms—Digital video forensics, deep learning, eye blink-
+ing
+I. INTRODUCTION
+The advancement in camera technology, wide availability
+of cellphones and increasing popularity of social networks
+(FaceBook, Twitter, WhatsApp, InstaGram, and SnapChat) and
+video sharing portals (YouTube and Vemeo) have made the
+creation, editing and propagation of digital videos more con-
+venient than ever. This has also bring forth digital tampering of
+videos as an effective way to propagate falsiﬁed information.
+Unlike the case for digital images, editing videos has
+been a time-consuming and painstaking task due to the lack
+of sophisticated editing tools like PhotoShop and the large
+number of editing operations involved for a video – as a case
+in point, a 20 second video with 25 frames per second requires
+editing of 500 images. As such, highly realistic fake videos
+were rare, and most can be identiﬁed relatively easily based
+on some conspicuous visual artifacts.
+However, the situation has been changed dramatically with
+the new generation of generative deep neural networks [1],
+which are capable of synthesizing videos from large volume of
+training data with minimum manual editing. The situation ﬁrst
+caught attention in earlier 2018, when a software tool known
+as DeepFake was made publicly available based on such
+an approach. DeepFake uses generative adversary networks
+(GANs) to create videos of human faces of one subject to
+replace those in an original video. Because the GAN models
+were trained using tens of thousands of images, it can generate
+realistic faces that can be seamlessly spliced into the original
+video, and the generated video can lead to falsiﬁcation of the
+subject’s identity in the video. Subsequently, there had been
+a surge of fake videos generated using this tool and uploaded
+to YouTube for gross violations of privacy and identity, some
+with serious legal implications 1.
+1For
+example,
+see
+https://www.lawfareblog.com/deep-fakes-looming-
+crisis-national-security-democracy-and-privacy.
+Detecting such fake videos becomes a pressing need for the
+research community of digital media forensics.
+While traditional media forensic methods based on cues at
+the signal level (e.g, sensor noise, CFA interpolation and dou-
+ble JPEG compression), physical level (e.g, lighting condition,
+shadow and reﬂection) or semantic level (e.g, consistency of
+meta-data) can be applied for this purpose, the AI generated
+fake face videos pose challenges to these techniques. In this
+work, we describe a ﬁrst forensic method targeting at such fake
+videos. The general methodology we follow is to detect the
+lack of physiological signals intrinsic to human beings that are
+not well captured in the synthesized videos. Such signals may
+include spontaneous and involuntary physiological activities
+such as breathing, pulse and eye movement, and are oftentimes
+overlooked in the synthesis process of fake videos. Here, we
+focus on the detection of the lack of eye blinking to expose AI
+synthesized face videos. Our method is based on a novel deep
+learning model combining a convolutional neural network
+(CNN) with a recursive neural network (RNN) to capture the
+phenomenological and temporal regularities in the process of
+eye blinking. Current methods employ Convolutional Neural
+Networks (CNN) as a binary classiﬁer to distinguish open
+and close eye state of each frame. However, CNN generates
+predictions based on single frame, which does not leverage the
+knowledge in temporal domain. As human eye blinking has
+strongly temporal correlation with previous states, we employ
+Long-term Recurrent Convolutional Neural Networks (LRCN)
+[2] distinguish open and close eye state with the consideration
+of previous temporal knowledge. Our method is tested over
+benchmarks of eye-blinking detection datasets and also show
+promising performance on detecting videos generated with
+DeepFake.
+II. BACKGROUNDS AND RELATED WORKS
+Blinking refers to the rapid closing and opening movement
+of the eyelid. There are three major types of blinking, as
+Spontaneous blink, Reﬂex blink and Voluntary blink. The
+Spontaneous blink refers to blinking without external stimuli
+and internal effort, which is controlled the pre-motor brain
+stem and happens without conscious effort, like breathing and
+digestion. Spontaneous blinking serves an important biological
+function that moisturizes with tears and remove irritants from
+the surface of the cornea and conjunctiva. For a health adult
+human, generally, between each blink is an interval of 210
+seconds but the actual rates vary by individual.
+arXiv:1806.02877v2  [cs.CV]  11 Jun 2018
 "
-Page 2,"vulnerability management is to assess each mitigation to ensure that the
-exposure to each vulnerability is less than it was before deploying mitigations
-if you're mitigations are doing their job your organization's attack service
-should be smaller at this point the process repeats itself and continually
-results in finding new vulnerabilities and ways to mitigate them
-==== C:/Users/Kassem Anis/OneDrive - Debreceni
-Egyetem/Asztal/HPOTest/videos/D4002.mp4 ====
-attackers and cybersecurity professionals both use reconnaissance to gather
-information about a target environment attackers use reconnaissance to
-identify the weakest component or components in an environment in
-cybersecurity professionals carry out the same tasks to identify vulnerabilities
-before the attackers do there are two main types of reconnaissance that are
-helpful to build a picture of a target environment passive reconnaissance is
-the process of collecting information about a target environment without
-interacting with that environment directly active reconnaissance collects
-environmental information by interacting with the environment and analysing
-responses knowing how to use active and passive reconnaissance prepares
-an organisation to build a solid defense from cyber-attack in advantage of
-passive reconnaissance is that information collection can occur in stealthy
-manner the target environment is not alerted to passive reconnaissance
-activities internet search engines and social media can be great sources of
-information about any organisation or person it doesn't take long to collect
-demographic and other descriptive information about a target the technique of
-using an internet search engine to find detailed information about any entity is
-a process called Google hacking Google hacking involves using specific
-syntax and constructing Google or other search engine queries to return
-information about online entities social media accounts for an organisation or
-its personnel can also return valuable information job postings can also be
-repositories of valuable environmental information for example if an
-organisation is advertising for an Apache web server security specialist it
-stands to reason that that organisation uses the Apache web server job
-applicant requirements often divulge important environmental architectural
-details other online resources for passive reconnaissance include sites that
-published leaked passwords and strategic search engines such as showdown
-or census open a web browser and navigate to https colon slash slash
-www.shonenjump.com
+Page 2,"0
+1
+0
+1
+Probability 
+Probability 
+Seconds 
+Original
+Fake
+#15
+#50
+#75
+#135
+#165
+#105
+#15
+#50
+#75
+#135
+#165
+#105
+Fig. 1. Example of eye blinking detection on an original video (top) and a DeepFake generated fake video (bottom. Note that in the former,
+an eye blinking can be detected within 6 seconds, while in the latter such is not the case, which is abnormal from the physiological point
+of view.
+The mean resting blinking rate is 17 blinks/min or 0.283
+blinks per second2(during conversation this rate increases to 26
+blinks/min, and decreases to 4.5 blinks/second while reading
+this difference may be interesting in our analysis since many of
+the talking-head politicians are probably reading when they are
+being ﬁlmed). For now, however, Ill assume an average rate of
+17 blinks/min. The length of a blink is 0.1-0.4 seconds/blink3.
+AI generated face lack eye blinking function, as most
+training datasets do not contain faces with eyes closed. The
+lack of eye blinking is thus a telltale sign of a video coming
+from a different source than a video recorder. If we assume
+an average exposure time of 1/30 second then I estimate that
+the probability of capturing a photo with someone blinking is
+about 7.5%. Of course, most photos of someone online wont
+show them with their eyes closed, so this likelihood goes way
+down in practice.
+A. AI Generation of Fake Videos
+Realistic images/videos have been generated using detailed
+3D computer graphics models. recently, the development of
+new deep learning algorithms, especially those based on the
+generative adversary networks (GANs). Goodfellow et al. [3]
+ﬁrst proposed generative adversarial networks (GANs), which
+typically consist of two networks: generator and discrimina-
+tor. The generator aims to produce a sample which should
+2https://www.ncbi.nlm.nih.gov/pubmed/9399231.
+3http://bionumbers.hms.harvard.edu/bionumber.aspx?id=100706&ver=0.
+not be distinguished from training data distribution, while
+discriminator is to assess the sample produced by generator.
+Denton et al [4] proposed a Laplacian pyramid GAN to
+generate images in a coarse-to-ﬁne fashion. Radford et al. [5]
+proposed Deep Convolutional GANs (DCGAN) and showed
+the potential for unsupervised learning. Arjovsky et al. [6]
+used Wasserstein distance to make training stable. Isola et
+al. [7] investigated conditional adversarial networks to learn
+mapping from input image to output image and also the loss
+function to train the mapping. Taigman et al. [8] proposed the
+Domain Transfer Network (DTN) to map a sample from one
+domain to an analog sample in another domain and achieved
+favorable performance on small resolution face and digit im-
+ages. Shrivastava et al. [9] reduced the gap between synthetic
+and real image distribution using a combination of adversarial
+loss and self-regularization loss. Liu et al. [1] proposed an
+unsupervised image to image translation framework based on
+coupled GANs, with the aim to learn the joint distribution of
+images in different domains.
+B. Eye Blinking Detection
+Detecting eye blinking has been studied in computer visions
+for applications in fatigue detection [10]–[14] and face spoof
+detection [15]–[19], and various methods have been proposed
+to solve this problem.
+Pan et al. [20] constructs undirected conditional random
+ﬁeld framework to infer eye closeness such that eye blinking
 "
-Page 3,"==== C:/Users/Kassem Anis/OneDrive - Debreceni
-Egyetem/Asztal/HPOTest/videos/D4003.mp4 ====
-another useful website for passive reconnaissance is the way back machine
-which can be found at archive.org the way that machine stores archived
-versions of websites some of which go back over 20 years you will not find
-every website represented in this database but for those that do exist looking
-at old versions of an organization's website can reveal lots of information
-about that organisation open a web browser and navigate to https colon slash
-slash archive.org type loki.com the results page shows how many times the
-website learnt key.com has been captured you can select any date on the
-calendar to see what the website look like on that day you can see this
-website has been captured 826 times between November 9th 1996 through
-March 18th 2022 let's select the year 2007 and pick any date on that calendar
-look like in 2007 the way that machine can provide lots of information about
-how companies have changed over time the other main approach to
-reconnaissance is active reconnaissance when carrying out active
-reconnaissance the goal is to communicate with the target environment to
-determine what resources exist within a network and what those Resources
-do one of the most common tools used for active reconnaissance is in map
-the in map utility stands for network mapper and fulfills its name quite well
-within map you can scan a network to find what nodes are active what ports
-are open on each node and even make an educated guess as to what
-operating system each node is running an initial in map scan is one that likely
-just Returns active nodes and helps develop the high level view of a network
-architecture the process of active reconnaissance used to map a network is
-called enumeration at the windows powershell prompt type in map minus
-capital a 10.0 / 24 and select the inner key on your keyboard the in map utility
-will scan the 10.0.0 network and report on open ports possible operating
-systems and any other service information it can find there are many other
-tools available to help collect information from a network including tools like
-who is netcat in Wireshark each one of these tools assists in collecting
-information about a network environment by sending network traffic to Nodes
-in the network and analysing the results active reconnaissance is generally
-more accurate than passive reconnaissance but at the risk of the person
-carrying out the reconnaissance being discovered most active reconnaissance
-utilities generate traffic that network security devices can detect and potentially
-classify as malicious activity in short if stealth is important use passive
-reconnaissance first and then only use active techniques sparingly
+Page 3,"is detected. Sukno et al. [21] employs Active Shape Models
+with the Invariant Optimal Features to delineate the outline
+of eyes and computes the eye vertical distance to decide
+eye state. Torricelli et al. [22] utilizes the difference between
+consecutive frames to analyze state of eyes. Divjak et al. [23]
+employs optical ﬂow to obtain eye movement and extract
+the dominant vertical eye movement for blinking analysis.
+Yang et al. [24] models the shape of eyes based on a pair
+of parameterized parabolic curves, and ﬁt the model in each
+frame to track eyelid. Drutarovsky et al. [25] analyzes the
+variance of the vertical motions of eye region which is detected
+by a ViolaJones type algorithm. Then a ﬂock of KLT trackers
+is used on the eye region. Each eye region is divided into
+3x3 cells and an average motion in each cell is calculated.
+Soukupova et al. [26] fully relies on face landmarks and
+proposes a single scalar quantity – eye aspect ratio (EAR), to
+characterize the eye state in each frame. Then a SVM is trained
+using EAR values within a short time window to classify
+ﬁnal eye state. Kim et al [27] studies CNN-based classiﬁers
+to detect eye open and close state. They adopt ResNet-50
+[28] model and compare the performance with AlexNet and
+GoogleNet.
+In this paper, we extend the work on CNN-based classiﬁer
+to LRCN [2], which incorporates the temporal relationship
+between consecutive frames, as eye blinking is a temporal
+process which is from opening to closed, such that LRCN
+memorize the long term dynamics to remedy the effect by
+noise introduced from single image.
+III. METHOD
+In this section, we describe in detail our method to detecting
+eye blinking in a video. The general pipeline of our algorithm
+is provided in Figure 2. Our method ﬁrst detects faces in each
+frame of the video4 The detected faces are then aligned into
+the same coordinate system to discount head movements and
+changes in orientations based on detection of facial landmark
+points. Regions corresponding to each eye are extracted out
+to form a stable sequence (top row in Fig.2(c)). After these
+pre-processing steps, eye blinking is detected by quantifying
+the degree of openness of an eye in each frame in video using
+the LRCN model. We describe each of these steps in sequel.
+A. Pre-processing
+The ﬁrst step in our method is to locate the face areas in
+each frame of the video using a face detector. Then facial
+landmarks, which are locations on the face carrying important
+structural information such as tip of the eyes, noses and mouths
+and contours of the cheek, are extracted from each detected
+face area.
+The head movement and changes in face orientation in the
+video frames introduce distractions in facial analysis. As such,
+we ﬁrst align the face regions to a uniﬁed coordinate space
+using landmark based face alignment algorithms. Speciﬁcally,
+4For simplicity, we focus on one subject shown in each frame of the video
+to analyze, but this can be easily extended to the case of multiple subjects in
+the video.
+given a set of face landmarks in original coordinate, 2D face
+alignment is to warp and transform the image to another
+coordinate space, where the transformed face is (1) in the
+center of image, (2) rotated to make eyes lie on a horizontal
+line and (3) scaled to a similar size.
+From the aligned face areas, we can extract a surrounding
+rectangular regions of the landmarks corresponding to the
+contours of the eyes into a new sequence of input frames,
+see Figure 2(b). Speciﬁcally, the rectangle region is generated
+by ﬁrst extracting the bounding boxes of each eye’s landmark
+points, then enlarging the bounding box by (1.25, 1.75) in the
+horizontal and vertical directions. This is to guarantee that the
+eye region is included in the cropped region. The cropped
+eye area sequences are passed into LRCN for dynamic state
+prediction.
+B. Long-term Recurrent Convolutional Networks (LRCN)
+As human eye blinking shows strong temporal depen-
+dencies, we employ the Long-term Recurrent Convolutional
+Networks (LRCN) model [2] to capture such temporal depen-
+dencies.
+As shown in Figure 2(c), the LRCN model is composed by
+three parts, namely, feature extraction, sequence learning and
+state prediction. Feature extraction module convert the input
+eye region into discriminative features. It is implemented with
+a Convolutional Neural Network (CNN) based on the VGG16
+framework [29] but without fc7 and fc8 layers5. VGG16 is
+composed by ﬁve blocks of consecutive convolutional layers
+conv1 ∼5, where max-pooling operation follows each block.
+Then three fully connected layers fc6 ∼8 are appended on
+the last block. The output from the feature extraction is fed into
+sequence learning, which is implemented with a recursive neu-
+ral network (RNN) with Long Short Term Memory (LSTM)
+cells [30]. The use of LSTM-RNN is to increase the memory
+capacity of the RNN model and avoid the gradient vanishing
+in the back-propagation-through-time (BPTT) algorithm in the
+training phase. LSTMs are memory units that control when
+and how to forget previous hidden states and when and how
+to update hidden states. We use LSTM as illustrated in Figure
+3, where σ(x) =
+1
+1+e−x is sigmoid function to push input into
+[0, 1] range, tanh(x) = ex−e−x
+ex+e−x is hyperbolic tangent function
+which squash input into [−1, 1] range, ⊙denotes inner product
+of two vectors. Given input Ct−1, ht−1, xt, the LSMT updates
+along with time t by
+ft = σ(Wfhht−1 + Wfxxt + bf)
+it = σ(Wihht−1 + Wixxt + bi)
+gt = tanh(Wchht−1 + Wcxxt + bc)
+Ct = ft ⊙Ct−1 + it ⊙gt
+ot = σ(Wohht−1 + Woxxt + bo)
+ht = ot ⊙tanh(Ct)
+(1)
+where ft is forget gate to control what previous memories
+will be discard, it is input gate to selectively pass the current
+5Other deep CNN architecture such as ResNet [28] can also be used but
+for simplicity we choose VGG16 in the current work.
 "
-Page 4,"==== C:/Users/Kassem Anis/OneDrive - Debreceni
-Egyetem/Asztal/HPOTest/videos/D4004.mp4 ====
-the testing phase of vulnerability identification is really an extension of the
-active reconnaissance phase testing or port scanning often uses many of the
-same tools as those used in initial active reconnaissance the main difference
-is in the intensity of the scan and the quantity of traffic sent to each node a
-simple icmp packet sent to a suspected node may be sufficient to report that
-the note is alive but to determine what ports are open and what services are
-running on each port many more packets will be sent to the same node testing
-through port scanning is an effective way to collect the same information about
-your environment that attackers may try to use against you the inmate utility is
-a favourite tool to use in Port scanning multiple tools are available that either
-work in a similar fashion to in map or that provide a more user friendly front
-end map for more sophisticated and unattended port scanning more
-comprehensive packages such as nessus or openvas provide aggressive port
-scanning and Environment analysis with user-friendly front ends the main goal
-of the testing or port scanning phase is to collect as much information as
-possible about the operating systems and services the target environments
-nodes are running when an attacker or cybersecurity professional knows what
-services are running on what nodes identifying which of those components are
-most vulnerable becomes possible for example if a brand new vulnerability for
-the Microsoft internet information services or II's web server is published and
-attacker would want to know if that vulnerability might be an attack vector for
-specific target if the testing phase reports that a target runs the Linux
-operating system in the Apache web server no iis vulnerability would do the
-attacker any good that's why learning as much as possible about each target
-node helps choose the vulnerabilities that may be the way to compromise one
-of those nodes
-==== C:/Users/Kassem Anis/OneDrive - Debreceni
-Egyetem/Asztal/HPOTest/videos/D4005.mp4 ====
-in Linux open the greenbone security manager which is the web interface for
-openvas to do that launch a web browser and navigate to 10.091 type webinar
-in the username fill in an admin in the password fill in then select sign in select
-scans to display the task page the wizards icon in the upper left portion of the
-page and select task wizard to open the task wizard dialog you can initiate a
-comprehensive scan on a single target or network by typing the IP address in
-the IP address or hostname fill in and selecting start scan for now select
-cancel select a wizard icon again and this time select advanced Task wizard to
+Page 4,"CNN
+LSTM
+Time:
+CNN
+CNN
+CNN
+LSTM
+LSTM
+LSTM
+FC
+FC
+FC
+FC
+0
+0
+CNN
+LSTM
+FC
+0
+1
+Eye sequence
+Feature 
+extraction
+Sequence 
+learning
+State 
+prediction
+0
+(a)
+(b)
+(a)
+(c)
+p1 p2 p3
+     
+p6 p5 p4
+Fig. 2. Overview of our LRCN method. (a) is the original sequence. (b) is the sequence after face alignment. We crop out eye region of each
+frame based on eye landmarks p1∼6 in (b) and pass it to (c) LRCN, which consists of three parts: feature extraction, sequence learning and
+state prediction.
++
+tanh
+tanh
+σ
+σ
+σ
+Ct−1
+xt
+ht−1
+ht=zt
+ht
+Ct
+Fig. 3. A diagram of LSTM structure.
+input, which is manipulated by gt, ot is output gate to control
+how much memory will be transferred into hidden state ht.
+Memory cell Ct is combined by previous memory cell Ct−1
+controlled by ft and manipulated input gt controlled by it. We
+use 256 hidden units in LSTM cell, which is the dimension
+of LSTM output zt.
+For the ﬁnal state prediction stage, the output of each RNN
+neuron is further sent to neural network consists of a fully
+connected layer, which takes the output of LSTM and generate
+the probability of eye open and close state, denoted by 0 and
+1 respectively.
+C. Model Training
+The training of the LRCN model is performed in two steps.
+In the ﬁrst step, we train the VGG based CNN model based
+on a set of labeled training data consisting of eye regions
+corresponding to open and closed eyes. The model is trained
+using back-propagation implemented with stochastic gradient
+descent and dropout by probability 0.5 in fully connected
+layers. In the second step, the LSTM-RNN and fully con-
+nected part of the network are trained jointly using the back-
+propagation-through-time (BPTT) algorithm. In both cases, the
+loss objective is cross entropy loss with binary classes (open
+or closed).
+IV. EXPERIMENTS
+We train the LRCN model based on image datasets of eye
+open states. We then test the algorithm detecting eye blinking
+on authentic and fake videos generated with the DeepFake
+algorithm.
+A. Datasets
+To date, there are a few image datasets that can be used
+for evaluating algorithms that detect closed eyes, such as
+the CEW Dataset [31]6, which includes 1, 193 images of
+closed eyes and 1, 232 images of open eyes7 However, no
+existing video dataset specially designed for the same purpose
+is available8, which is important due to the temporal nature
+of eye blinking. To be able to experimentally evaluate our
+algorithm, we downloaded 50 videos, where each represents
+one individual and lasts approximate 30 seconds with at
+least one blinking occurred, to form the Eye Blinking Video
+(EBV) dataset. We annotate the left and right eye states of
+each frame of the videos using a user-friendly annotation
+tool we developed. Our dataset is available to download
+from http://www.cs.albany.edu/∼lsw/downloads.html. In our
+experiments, we use the CEW dataset to train the front-end
+CNN model, and select 40 videos as our training set for the
+overall LRCN model and 10 videos as the testing set.
+B. Generating Fake Videos
+We use DeepFake with post-processing to generate fake face
+videos, see Figure 4. Speciﬁcally, we ﬁrst use dlib to detect
+face area in each image. Then face landmarks are extracted for
+6http://parnec.nuaa.edu.cn/xtan/data/ClosedEyeDatabases.html.
+7The other dataset, the EEG Eye State Data Set https://archive.ics.uci.edu/
+ml/datasets/EEG+Eye+State, is not available to download.
+8There is the ZJU Eyeblink Video Database [20], but there is no access to
+the data.
 "
-Page 5,"open the advanced Task wizard dialog in this dialogue you can initiate a scan
-but you have more control of the scan parameters one of the more flexible
-parameters you can change here is the type of scan to perform select the
-scan config drop down arrow and select Discovery type 10.0.0 / 24 and the
-target host fill in then select create to initiate a Discovery scan for the 10.0.0 /
-24 network and then carry out this scan to find out what nodes are running on
-the network the nature of Port scanning is that it is an iterative process that
-means that the common approach is to start with high level scans and then
-create more detailed scans based on the information received in the previous
-scan layer for example a first-level scan might include an operating system
-fingerprint pass which means in attempt to determine the operating system for
-each node taking the results of the phase one scan the next scan could
-search for common ports that might be open based on the detected operating
-system this approach requires many more scans and lots of repetitive activity
-to increase consistency and reduce errors automation can help simplify
-multiple layers of scans automation can be as simple as writing scripts that
-call command line utilities or utilising more comprehensive scanners such as
-nessus or open bass in automating their activities regardless of the nature of
-the tools it is recommended to automate scans as much as possible to reduce
-the workload in finding vulnerabilities
-==== C:/Users/Kassem Anis/OneDrive - Debreceni
-Egyetem/Asztal/HPOTest/videos/D4006.mp4 ====
-an important part of vulnerability management is determining what
-vulnerabilities exist in the scope of an IT environment the standard approach
-to discovering vulnerabilities is to compare current hardware and software
-inventory with the repository of known vulnerabilities knowing how to use
-vulnerability repositories and how to avoid their limitations helps avoid missing
-important vulnerabilities there are multiple sources of vulnerability repositories
-available both as lists and databases some repositories are publicly available
-in others are available by subscription only regardless of the repositories you
-may choose to use it is important that your inventory Express hardware and
-software components in a way that you can query the repository for matching
-vulnerabilities likewise you should use a standard vocabulary for describing
-vulnerabilities their severity and possible mitigations open web browser and
-navigate to https colon slash slash cve.mitre.org cde stands for common
-vulnerabilities and exposures and it is a list of publicly disclosed security flaws
-maintained by The Mitre organisation this is one of the most common
-repositories of vulnerabilities that's published to the world select search cve
+Page 5,"Face 
+detection
+Landmarks 
+extraction
+Face
+alignment
+DeepFake 
+converting
+Affine
+warp
++
+Smooth 
+boundary
+(h)
+(g)
+Original
+Fake
+(a)
+(b)
+(c)
+(d)
+(f)
+(j)
+(i)
+Affine
+warp
+(e)
+Fig. 4. Overview of fake face generation pipeline. (a) is the original input image. The green dash box in (b) is face area localized by face detector. (c) is
+the face landmarks. (d) is the face after alignment. DeepFake takes (d) as input and convert it to (g). The artifacts are introduced by directly afﬁne warping
+generated face back to (a), as shown in (f, e). (h) denotes the convex polygon mask that generated face inside is retained. (i) is the smooth process on boundary
+of mask. (i) is the ﬁnal fake image.
+face alignment as described in section III. We then generate
+the corresponding fake faces using the DeepFake algorithm.
+If we directly afﬁne warp this rectangle of fake face back to
+image using similarity transformation matrix, the boundary of
+rectangle is visible in most cases as the slight color difference
+of real and fake face area, as shown in Figure 4(e). To reduce
+such artifacts, we generate a speciﬁc mask which is a convex
+polygon determined by landmarks of left and right eyebrow,
+and the bottom mouth. As such, we only retain content inside
+this mask after afﬁne warping fake face back to original image.
+To further smooth the transformation, we apply Gaussian blur
+to the boundary of mask. With this procdure, we generate 49
+fake videos.
+1) Data preparation: Face detection, landmark extraction
+and face alignment are implemented based on library dlib
+[32], which integrates the current state-of-the-art face analysis
+algorithms. We generate eye sequences by cropping out eye
+area of each frame of our video dataset.
+We augment data to increase training robustness. The train-
+ing of the front-end CNN model takes images as input, so we
+use each frame of generated eye sequences as training sample,
+with additional augmentation: horizontal ﬂipping image, modi-
+fying image color contrast, brightness and color distortion. For
+LRCN joint training, eye sequences are required. In particular,
+the augmentation process for sequence should be consistent
+to avoid affect temporal relationship, such that the process for
+each frame in sequence should be same.
+With combination of our cropped eye images and CEW
+dataset, we train VGG16 as a binary image classiﬁer to
+distinguish eye state in image domain. The input size is ﬁxed
+as 224x224 and the batch size is 16. The learning rate starts
+from 0.01 and decays by 0.9 each 2 epochs. We employ
+stochastic gradient descent optimizer and terminate training
+until it reaches the maximum epoch number 100. Then we
+remove fc7, fc8 layers from trained VGG16 to be the feature
+Fig. 5. Illustration of ROC curve for CNN, LRCN and EAR.
+extraction part of LRCN.
+We randomly select a sequence which contains a variety of
+temporal consecutive eye images with at least one blinking
+occurred as LRCN input. Each sample has variable length
+between 10 to 20 images. We ﬁx the parameters of CNN layers
+we obtain above and perform training on rest part: LSTM cells
+and fc layer. We set batch size as 4. The learning rate starts
+from 0.01 and decay by 0.9 each 2 epochs. We use the ADAM
+optimizer [33] and terminate training until 100 epochs.
+C. Evaluations
+We evaluate our LRCN method with comparison to other
+methods: Eye Aspect Ratio (EAR) [26] and CNN. CNN image
+classiﬁer is trained on image domain to distinguish different
+classes. We employ VGG16 as our CNN model to distinguish
+eye state.
+EAR method replies on eye landmarks to analyze eye state,
+in terms of the ratio between the distance of upper and lower
+lid, and the distance between left and right corner point, which
 "
-Page 6,"list and type Apache in the search box and select submit the results show a
-list of all of the known and published vulnerabilities with the Apache web
-server or at least that include the word Apache notice there are 2032 records
-that match your search you scroll through you can see there's lots and lots of
-vulnerabilities that have been posted here let's select one and you can see a
-description of a specific cve ID entry with a description of what the
-vulnerability is the date the record is created and lots of information about the
-vulnerability and what to do about it vulnerability repositories can dramatically
-reduce the time required to identify vulnerabilities but they're only useful if the
-contents of the repository are current since new vulnerabilities are discovered
-daily and out of date vulnerability repository may miss crucial vulnerabilities
-that could allow an attacker to compromise your environment that's why it's
-important to continually scan your networks for running services and compare
-that result with online up-to-date vulnerability repositories to make sure you're
-aware of every vulnerability that could impact your environment
-==== C:/Users/Kassem Anis/OneDrive - Debreceni
-Egyetem/Asztal/HPOTest/videos/D4007.mp4 ====
-publicly available vulnerability repositories ease the burden of identifying
-vulnerabilities using industry standard tools to carry out vulnerability
-identification reduces the amount of time required and increases the quality of
-the vulnerability identification process finding more vulnerabilities along with
-severity information assists assessors in determining which vulnerabilities
-warrant the strongest response while there is still substantial work to be done
-using standard tools increases the effectiveness of making recommendations
-and crafting policies that are aligned with industry-wide best practices many
-tools including nests openvas and even the Legacy Microsoft baseline security
-Analyser or mbsa correlate their findings with online publicly available
-vulnerability repositories and produce standard output and reports that are
-easy to understand and use in decision-making security manager web
-interface for openvas to do that launch a web browser and navigate to 10.091
-type web admin in the username fill in and admin in the password fill in select
-sign in select scans then tasks to go to the task page scroll down and you can
-see there are three scans to a complete and one and still in process the first
-scan was a scan of the IP address 10.0.0 131 that's actually this current virtual
-machine the severity shows very little concern and indicates that this node
-appears to be relatively secure already the next scan however is a different
-story the IP address 10.045 is another virtual machine that's running an older
-version of Ubuntu and is configured to be deliberately insecure you can see
+Page 6,"is deﬁned as ∥p2−p6∥+∥p3−p5∥
+2∥p1−p4∥
+(see Figure 2(b)). This method
+runs fast as merely cost in ratio computation. However, the
+main drawback of EAR method is that it fully depends on eye
+landmarks, which is not reliable in many cases.
+Main results: We evaluate these three methods on our own
+testing data mentioned in section IV-A. Figure 5 illustrate
+the ROC curve of three methods. Observe that LRCN show
+the best performance 0.99 compared to CNN 0.98 and EAR
+0.79. CNN in this experiment shows an exceptional well
+performance to distinguish the eye state on image domain.
+However, its prediction does not consider temporal knowl-
+edge of previous state. LRCN takes advantage of long term
+dynamics to effectively predict eye state, such that it is more
+smooth and accurate. An example is illustrated in Figure 6.
+At some frames, the state of left eye is ambiguous since eye
+area is small. Only depending on image domain, CNN will
+be confused. With temporal domain, LRCN can memorize the
+previous state. If blinking has occurred before, the eye state in
+next couple frames are very likely to be open (Figure 6 #139).
+If there is no trend of eye closing before, the eye state of next
+frame is very likely to be open (Figure 6 #205).
+V. CONCLUSION
+The new developments in deep generative networks have
+signiﬁcantly improve the quality and efﬁciency in generating
+realistically-looking fake face videos. In this work, we describe
+a new method to expose fake face videos generated with neural
+networks. Our method is based on detection of eye blinking
+in the videos, which is a physiological signal that is not well
+presented in the synthesized fake videos. Our method is tested
+over benchmarks of eye-blinking detection datasets and also
+show promising performance on detecting videos generated
+with DeepFake.
+There are several directions that we would like to further im-
+prove the current work. First, we will explore other deep neural
+network architectures for more effective methods to detect
+closed eyes. Second, our current method only uses the lack of
+blinking as a cue for detection. However, the dynamic pattern
+of blinking should also be considered – too fast or frequent
+blinking that is deemed physiologically unlikely could also be
+a sign of tampering. Finally, eye blinking is a relatively easy
+cue in detecting fake face videos, and sophisticated forgers can
+still create realistic blinking effects with post-processing and
+more advanced models and more training data. So in the long
+run, we are interested in exploring other types of physiological
+signals to detect fake videos.
+REFERENCES
+[1] M.-Y. Liu, T. Breuel, and J. Kautz, “Unsupervised image-to-image
+translation networks,” in NIPS, 2017, pp. 700–708.
+[2] J. Donahue, L. Anne Hendricks, S. Guadarrama, M. Rohrbach, S. Venu-
+gopalan, K. Saenko, and T. Darrell, “Long-term recurrent convolutional
+networks for visual recognition and description,” in CVPR, 2015, pp.
+2625–2634.
+[3] I. Goodfellow, J. Pouget-Abadie, M. Mirza, B. Xu, D. Warde-Farley,
+S. Ozair, A. Courville, and Y. Bengio, “Generative adversarial nets,” in
+Advances in neural information processing systems, 2014, pp. 2672–
+2680.
+[4] E. L. Denton, S. Chintala, R. Fergus et al., “Deep generative image
+models using a laplacian pyramid of adversarial networks,” in Advances
+in neural information processing systems, 2015, pp. 1486–1494.
+[5] A. Radford, L. Metz, and S. Chintala, “Unsupervised representation
+learning with deep convolutional generative adversarial networks,” arXiv
+preprint arXiv:1511.06434, 2015.
+[6] M. Arjovsky, S. Chintala, and L. Bottou, “Wasserstein gan,” arXiv
+preprint arXiv:1701.07875, 2017.
+[7] P. Isola, J.-Y. Zhu, T. Zhou, and A. A. Efros, “Image-to-image translation
+with conditional adversarial networks,” arXiv preprint, 2017.
+[8] Y. Taigman, A. Polyak, and L. Wolf, “Unsupervised cross-domain image
+generation,” arXiv preprint arXiv:1611.02200, 2016.
+[9] A. Shrivastava, T. Pﬁster, O. Tuzel, J. Susskind, W. Wang, and R. Webb,
+“Learning from simulated and unsupervised images through adversarial
+training,” in CVPR, vol. 3, no. 4, 2017, p. 6.
+[10] W.-B. Horng, C.-Y. Chen, Y. Chang, and C.-H. Fan, “Driver fatigue
+detection based on eye tracking and dynamk, template matching,” in
+Networking, Sensing and Control, 2004 IEEE International Conference
+on, vol. 1.
+IEEE, 2004, pp. 7–12.
+[11] Q. Wang, J. Yang, M. Ren, and Y. Zheng, “Driver fatigue detection: a
+survey,” in Intelligent Control and Automation, 2006. WCICA 2006. The
+Sixth World Congress on, vol. 2.
+IEEE, 2006, pp. 8587–8591.
+[12] W. Dong and X. Wu, “Fatigue detection based on the distance of eyelid,”
+in VLSI Design and Video Technology, 2005. Proceedings of 2005 IEEE
+International Workshop on.
+IEEE, 2005, pp. 365–368.
+[13] T. Azim, M. A. Jaffar, and A. M. Mirza, “Fully automated real time
+fatigue detection of drivers through fuzzy expert systems,” Applied Soft
+Computing, vol. 18, pp. 25–38, 2014.
+[14] B. Mandal, L. Li, G. S. Wang, and J. Lin, “Towards detection of
+bus driver fatigue based on robust visual analysis of eye state,” IEEE
+Transactions on Intelligent Transportation Systems, vol. 18, no. 3, pp.
+545–557, 2017.
+[15] Z. Boulkenafet, J. Komulainen, and A. Hadid, “Face anti-spooﬁng based
+on color texture analysis,” in Image Processing (ICIP), 2015 IEEE
+International Conference on.
+IEEE, 2015, pp. 2636–2640.
+[16] J. Galbally and S. Marcel, “Face anti-spooﬁng based on general image
+quality assessment,” in Pattern Recognition (ICPR), 2014 22nd Interna-
+tional Conference on.
+IEEE, 2014, pp. 1173–1178.
+[17] L. Li, X. Feng, X. Jiang, Z. Xia, and A. Hadid, “Face anti-spooﬁng
+via deep local binary patterns,” in Image Processing (ICIP), 2017 IEEE
+International Conference on.
+IEEE, 2017, pp. 101–105.
+[18] H. Steiner, A. Kolb, and N. Jung, “Reliable face anti-spooﬁng using
+multispectral swir imaging,” in Biometrics (ICB), 2016 International
+Conference on.
+IEEE, 2016, pp. 1–8.
+[19] H. Li, P. He, S. Wang, A. Rocha, X. Jiang, and A. C. Kot, “Learning
+generalized deep feature representation for face anti-spooﬁng,” IEEE
+Transactions on Information Forensics and Security, vol. 13, no. 10, pp.
+2639–2652, 2018.
+[20] G. Pan, L. Sun, Z. Wu, and S. Lao, “Eyeblink-based anti-spooﬁng in
+face recognition from a generic webcamera,” in Computer Vision, 2007.
+ICCV 2007. IEEE 11th International Conference on.
+IEEE, 2007, pp.
+1–8.
+[21] F. M. Sukno, S.-K. Pavani, C. Butakoff, and A. F. Frangi, “Automatic
+assessment of eye blinking patterns through statistical shape models,” in
+International Conference on Computer Vision Systems.
+Springer, 2009,
+pp. 33–42.
+[22] D. Torricelli, M. Goffredo, S. Conforto, and M. Schmid, “An adaptive
+blink detector to initialize and update a view-basedremote eye gaze
+tracking system in a natural scenario,” Pattern Recognition Letters,
+vol. 30, no. 12, pp. 1144–1150, 2009.
+[23] M. Divjak and H. Bischof, “Eye blink based fatigue detection for
+prevention of computer vision syndrome.” in MVA, 2009, pp. 350–353.
+[24] F. Yang, X. Yu, J. Huang, P. Yang, and D. Metaxas, “Robust eyelid
+tracking for fatigue detection,” in Image Processing (ICIP), 2012 19th
+IEEE International Conference on.
+IEEE, 2012, pp. 1829–1832.
+[25] T. Drutarovsky and A. Fogelton, “Eye blink detection using variance of
+motion vectors,” in European Conference on Computer Vision. Springer,
+2014, pp. 436–448.
+[26] T. Soukupova and J. Cech, “Real-time eye blink detection using facial
+landmarks,” in 21st Computer Vision Winter Workshop (CVWW2016),
+2016, pp. 1–8.
+[27] K. W. Kim, H. G. Hong, G. P. Nam, and K. R. Park, “A study of deep
+cnn-based classiﬁcation of open and closed eyes using a visible light
+camera sensor,” Sensors, vol. 17, no. 7, p. 1534, 2017.
 "
-Page 7,"the openvas agrees with that assessment a severity of 10.0 means that this
-node needs more attention select this second report to see the details let's
-select results to see a list of findings sorted by severity you generally should
-mitigate the most severe vulnerabilities first let's select CBE to see how each
-vulnerability maps to an entry in the cve list you can select any link in this list
-to see more details from CBE let's select the first entry for the first CBE entry
-so when you first looked at the cve list it's overwhelming although you can go
-to the cve website and search for your own vulnerabilities it's a lot easier to let
-a scanning tool find vulnerabilities and then correlate those to existing cve
-entries here we can scroll down and get an overview of the vulnerability that
-has been detected and lots of Supporting information on how to confirm it
-validate it and determining what to do about it this is one of the strongest
-reasons to use a tool like openvas or nessus or another integrated scanning
-platform it gives you all the information in one place to determine how to
-respond to a vulnerability this quick look at openvas is only a brief overview of
-the product there are many more robust features that help cybersecurity
-professionals keep their environments more secure
-==== C:/Users/Kassem Anis/OneDrive - Debreceni
-Egyetem/Asztal/HPOTest/videos/D4008.mp4 ====
-want the greatest advantages of a hyper-connected world is that it's very easy
-to dig up information on any subject there are many online resources that
-provide threat intelligent information learning from and drawing on current
-threat intelligence is a prerequisite for an effective vulnerability management
-program one of the most commonly referenced repositories for vulnerabilities
-is the one we've already seen the common vulnerabilities and exposures or
-cve list CBE is maintained by The Mitre corporation and should be the first go
-to when examining or researching vulnerabilities but cve is not the only source
-for vulnerabilities and threats a comprehensive threat intelligence program
-should include staying up to date with cybersecurity reports news items that
-relate to cybersecurity both free and subscription-based services and
-participating in collective intelligence exchanges let's go online look at a
-couple of the resources that are available to help stay current with ongoing
-threats open a web browser and navigate to https colon slash slash cve
-website from the CBE website we can search the CBE list by entering
-keywords that correspond to services or software we have installed we've
-already done that we can also go to data feeds provide multiple sources of
-information that you can subscribe to or just consume through a website such
-as this to keep up-to-date on security information take some time to look
-"
-Page 8,"through these various sources of security information find one that speaks to
-your organisation and use it to stay up to date another great resource to find
-various threat intelligent feeds can be found at https colon slash slash D3
-security.com intelligence dash feeds and once you type all that in you'll find a
-great resource for threat intelligent feeds spend some time scrolling through
-the resources on this website and you'll find a source of information that
-speaks to nearly every industry category and almost definitely you'll find
-several sources to keep you up to speed on what's going on with respect to
-threat intelligence some of the more important ones of course include
-department of homeland security the FBI in for guard portal is one that many
-cybersecurity professionals use there's ransomware tracker the Sands internet
-storm Center is another resource I would recommend that you take a look at
-and of course there's many more the idea is to develop an ongoing process of
-staying up to date on what's going on in the cybersecurity world
-==== C:/Users/Kassem Anis/OneDrive - Debreceni
-Egyetem/Asztal/HPOTest/videos/D4009.mp4 ====
-threat intelligence awareness operates at least two levels it is important to
-stay abreast of the current state of cybersecurity and ongoing threats but
-sometimes it is necessary to dig little deeper when suspected activity is
-discovered ad hoc threat intelligence describes the process of researching
-suspicious activity to determine if that activity is the result of a potential attack
-or preparation for an attack ongoing thread intelligent preparedness is the
-process of frequently visiting sites and Resources that contain updates news
-and summaries of ongoing cybersecurity topics automating thread intelligence
-activities is an absolute necessity to keep up with a fast-changing security
-landscape automation can include scripting frequent vulnerability scans
-utilising vulnerability assessment suites in their automation features and
-integrating schedule scans with updated vulnerability database and security
-feeds many information feeds provide apis that allow sophisticated scripts to
-automatically investigate vulnerability results to help stay current with
-emerging threats let's take a look at a few online threat intelligence resources
-the first is naked security at https colon slash slash make it security.com make
-it security publishers a podcast and pertinent articles that cover current
-cybersecurity topics their articles are sorted by date that you could search by
-keyword to find just what you're looking for the next resource is the sans
-internet storm center at https colon slash slash iscu the Sands internet storm
-Center is one of the core resources every cybersecurity professional should
-frequent this page gives you access to podcasts and diary entries of security
-"
-Page 9,"related resources and articles searching the diaries can provide a wealth of
-information on just about any security topic is threat post thread post is at
-https colon slash slash threatpost is yet another resource that offers podcasts
-and articles on current security topics many of the tools and Resources you
-have already seen support automating the collection and analysis of updated
-threat intelligence explore these resources to find out how automation can
-help reduce the daily workload of keeping current
-==== C:/Users/Kassem Anis/OneDrive - Debreceni
-Egyetem/Asztal/HPOTest/videos/D4010.mp4 ====
-the first step in crafting a penetration test cybersecurity attack or carrying out a
-comprehensive vulnerability assessment is that enumeration phase
-enumeration is developing the architectural detail plan of your target
-environment the reason that enumeration is so important in the vulnerability
-management process is because the whole purpose is to find what
-vulnerabilities are known that affect the hardware and software components of
-your network if your hardware and software asset list is incorrect or out of date
-you're going to miss potentially harmful vulnerabilities in your it environment a
-critical component of a comprehensive vulnerability management program is
-ensuring that all documentation pertaining to your it environment is accurate
-and up-to-date asset lists network Maps policies procedures in any other
-documentation should be periodically reviewed and updated to reflect the
-current state of your environment likewise documentation should be reviewed
-whenever a security incident occurs and after the incident has been resolved
-since the security incident can only occur when an attacker exploits a gap it is
-important to address any gaps in document any changes that were made
-assume that food fresh added a new web server to their environment to
-handle new line of allergen free food products if administrators neglect to add
-the new web server to the hardware and software asset list subsequent
-vulnerability assessments will ignore the new web server and potentially miss
-any vulnerabilities that are present while omitting a specific server or service
-does not always lead to an attack it does open the door for potential
-vulnerabilities to be found by an attacker if the system owner is not looking at
-the resource themselves that is why a change management process is so
-important to security keeping documentation up to date may not be easy but it
-will make your it environment much more secure and more shorten the time
-required to respond to incidents
-"
-Page 10,"==== C:/Users/Kassem Anis/OneDrive - Debreceni
-Egyetem/Asztal/HPOTest/videos/D4011.mp4 ====
-you may have heard the term risk management and vulnerability management
-used interchangeably in reality vulnerability management and risk
-management are related but they are distinct activities understanding the
-difference between a vulnerability and risk help security professionals develop
-the most effective strategies to avoid cyber attack a vulnerability is any
-Weakness in an environment that could allow an attacker to carry out a
-successful attack to carry out a successful attack and attack her must carry
-out and exploit against a vulnerability a risk is the likelihood that some action
-may occur that has an effect on an organisation along with the magnitude of
-the impact to that organisation in most cases and in our conversation of
-cybersecurity We Will consider risk to refer to an adverse event regardless of
-the approach used to assess risk the primary goal is to create a list of known
-risks sorted by likelihood and effect on the organisation any action that
-exploits a vulnerability successfully is referred to as a realised risk realise risk
-always has an effect on the organisation and the ones that are most likely to
-occur and had the highest negative impact are the ones that should be
-addressed first one approach to mitigating risk is to mitigate the vulnerability
-which could allow risk to be realised that's why vulnerability management and
-risk management are related processes
-==== C:/Users/Kassem Anis/OneDrive - Debreceni
-Egyetem/Asztal/HPOTest/videos/D4012.mp4 ====
-there are two main approaches to assessing and managing risk qualitative
-and quantitative it is important for security professionals to understand both
-qualitative and quantitative risk assessment methods and know when to use
-each one to build an effective risk response plan qualitative risk assessment
-assigns a subjective level of risk based on an individual risks likelihood of
-occurrence and effect on the organisation each organisation can define its
-own levels of risk the common risk levels include low medium high and
-extremely high a risk that is likely to occur several times each year and will
-result in a loss of several hundreds of thousands of Dollars with each
-occurrence would likely be assigned a risk of high or extremely high on the
-other hand a risk that is expected to only be realised once every 10 or 15
-years with an expected loss of $500 per occurrence would be assigned a risk
-level of low qualitative risk assessment is good for comparing the relative
-importance of different risks but not comparing monetary impact quantitative
-risk assessment assigns numbers that are easy to calculate and use in
-"
-Page 11,"formulas to determine expected loss each risk is a sign of probability of
-occurrence and a Dollar value for the loss should that risk be realised the
-Dollar value of the realised risk loss is easy to calculate by multiplying the
-occurrence probability times the loss expectancy quantitative risk analysis
-makes it easy to write risk by expected loss each year quantitative risk
-assessment works very well when numbers are available and can be largely
-automated however occurrence probabilities and expected loss numbers are
-only estimates it is often the case that personnel who worked most closely
-with the resources at risk may provide more valuable input to the risk
-assessment process for this reason it's recommended to use both qualitative
-and quantitative risk assessment and compare the results the best result of
-each analysis type would be a list with the same risks ranked in the same
-manner in practice the lists are likely to be slightly different and require
-management to make decisions on how to allocate limited budgets for risk
-mitigation
-==== C:/Users/Kassem Anis/OneDrive - Debreceni
-Egyetem/Asztal/HPOTest/videos/D4013.mp4 ====
-breach identified risk their generally four mitigation options organisations can
-choose any of the four depending on its applicability to a specific risk one way
-to mitigate risk is avoidance any risk that can completely be avoided without
-excessive costs should be avoided an example of avoidance can be disabling
-or removing unneeded services for example if a database server has an old
-insecure web server running on that same computer the unused web service
-may be vulnerable to attack disabling the web service or completely
-uninstalling the web service removes the vulnerability and any risk associated
-with it another risk mitigation strategy is acceptance if the risk is realised and
-causes very little negative impact to the organisation the best strategy may be
-simply to accept the risk if trying to mitigate the risk using some other
-technique would cost more than the loss that is expected then acceptance
-may be the best choice any risk that cannot be accepted or avoided may best
-be handled by being controlled controlling a risk means to deploy some
-security control that reduces the probability that a risk will be exploited by a
-successfully realised threat adding a firewall IDS or IP's or implementing nfa
-or examples of deploying security controls as mitigation strategies and finally
-the last risk mitigation strategy is to transfer the risk transferring a risk is the
-result of an agreement that should a risk be realised the loss would be
-covered by another party insurance is one of the most common risk
-transference approaches think of your personal vehicle personal car insurance
-"
-Page 12,"is an agreement between an account holder and an insurance provider in
-exchange for a periodic premium pay to the insurance provider the insurance
-provider agrees to pay for loss due to various types of Damages a key aspect
-of risk management is to understand the risks that posed the most danger to
-an organisation and which mitigation strategy provides the most economical
-protection against each risk
-==== C:/Users/Kassem Anis/OneDrive - Debreceni
-Egyetem/Asztal/HPOTest/videos/D4014.mp4 ====
-possum risks or global across any organisation other risks target specific data
-data disclosure is a risk for data that should not be disclosed not all data that
-information systems store or process should be protected from disclosure only
-data that is marked as sensitive should be protected and controlled from
-disclosure understanding how data classification affects security control needs
-is important to building effective security common classes are protected data
-include personally identifiable information or pii and personal health
-information or Phi pii and Phi are common targets of standards and
-regulations to ensure these types of data are protected pci-dss gdpr and hipa
-are all standards and regulations that set requirements on how pii and Phi are
-handled special classifications of certain types of data come with additional
-risk for example disclosing consumer private information or pii for
-organisations that are subject to gdpr may result in the risk of fine or loss of
-privileges gdpr does not place the same level of restrictions on non-personal
-data so in this way data classification should play into overall risk
-management in short some types of data carry more risk than other types of
-data
-==== C:/Users/Kassem Anis/OneDrive - Debreceni
-Egyetem/Asztal/HPOTest/videos/D4015.mp4 ====
-comprehensive security assessments of it systems should span all hardware
-and software components within an IT infrastructure each device is role
-should inform the level of assessment to ensure the utmost security of that
-component to yield the most effective security plan servers that have sensitive
-information should require higher levels of security than other devices that
-may not be targets to attack however devices that may provide incremental
-access to higher value servers must be assessed in the overall process as
-well remember that security is not a state but rather a process an organisation
-may take a security snapshot at a point in time but any changes to the
-"
-Page 13,"environment will likely change the overall security posture a rigorous change
-management process must be in place and followed to ensure the
-organisation can keep track of how the infrastructures state changes over time
-operations on a day-to-day basis both change the state of an infrastructure
-and gather valuable information on its operation collecting input from
-operations should be part of the security assessment process end users and
-help desk personnel can often provide valuable input as to how well or poorly
-and infrastructure is operating to ensure that all parts of an organisation are
-working together for more secure environment information Assurance should
-continually review input provided from all sources to ensure compliance with
-policy when all the pieces work together environments are more cohesive
-usable and secure
-==== C:/Users/Kassem Anis/OneDrive - Debreceni
-Egyetem/Asztal/HPOTest/videos/D4016.mp4 ====
-a disaster is any event that results in major disruption to operations disasters
-come in all forms and understanding the various types of disasters that may
-occur helps an organisation plan to whether those storms in most cases
-disasters can be classified as natural or human caused natural disasters
-include things like earthquakes tornadoes floods and other whether an
-environmental related events natural disasters can result in short-term
-disruptions or long-term disruptions a power outage as a result of an Electrical
-Storm is quite different than a complete loss of a data center due to flood
-organisations must have plans in place to respond to all types of disasters the
-other main classification of disaster is a human cause disaster disaster is in
-this class includes cyber attacks strikes Sabotage terrorism war or even
-negligence any human action that results in a major disruption to operations
-can be considered a human cause disaster regardless of the origin of any
-disaster the main goal is to protect personnel first then restore operations as
-quickly and efficiently as possible depending on the severity of the disaster
-recovery may require changes in location infrastructure repair or replacement
-and various levels of rebuilding any information systems environments
-==== C:/Users/Kassem Anis/OneDrive - Debreceni
-Egyetem/Asztal/HPOTest/videos/D4017.mp4 ====
-organisations should have at least two plans in place to respond to
-interruptions to operations the Two primary plans needed to survive in
-eruptions are a disaster recovery plan or drp and a business continuity plan or
-"
-Page 14,"BCP organisations who have proper plans in place have a much better
-chance of surviving an interruption rather than succumbing to it the difference
-between a drp and a BCP has to do with severity in short a BCP addresses
-short-term interruptions while a drp addresses severe damage to the
-infrastructure that supports operations both drp and BCP focus on restoring
-minimal business operations before an organisation can plan to continue or
-restore operations they must have a clear understanding of what makes up
-their operations a business impact analysis or BIA is a formal assessment of
-business processes that are Critical to support normal operations a
-comprehensive via defines all critical business functions or CBS that must be
-protected to conduct operations the drp and BCP provide details on what it
-takes to ensure that all CVs can operate a BCP is a plan that is activated
-whenever one or more CBFS are interrupted and interruption can be as
-simple as a power outage or a malfunctioning hvac system which causes
-workers to leave a facility a BCP often specifies alternate processing options
-that allow CBS to continue with minimal interruption bcps often depend on
-redundancy and alternate approaches to maintaining CBF continuity a drp
-gets activated whenever an event has caused so much damage that the
-infrastructure that supports operations can no longer function fires
-earthquakes and other major events that cause structural damage are often
-causes to activate a drp the drp specifies the steps necessary to take to
-restore the infrastructure that operations needs to continue once the drp
-satisfies its goals the BCP can continue to restart operations the two plans
-work together when necessary to ensure that an organisation experiences the
-minimum downtime possible during an interruption or disaster
-==== C:/Users/Kassem Anis/OneDrive - Debreceni
-Egyetem/Asztal/HPOTest/videos/D4018.mp4 ====
-a backup is one of the most common components of a BCP and drp that
-allows operations to continue organisations that do not create backups risk
-losing critical operational data that may result in substantial monetary losses a
-backup is simply a secondary copy of stored data to be used if the primary
-copy becomes damaged or otherwise unusable historically most organisations
-would create periodic backups to removable tape devices today backups may
-use tapes but may also utilise removable disks optical disks network storage
-or even virtualised images the primary goal of the backup is to copy important
-data to an alternate source with the hopes of separating the backup from the
-source of any damage that may occur to the primary copy since backups
-should be separated from primary copies removable Media or network storage
-"
-Page 15,"is often desirable geographically separated backups decrease the possibility
-that a catastrophic event will impact both the primary and secondary copies of
-data for that reason off-site backups and alternate processing sites are
-common to help organisations be resilient in the face of localised disasters
-let's take a look at creating a backup using Windows Server in Windows
-Server select start and type backup select Windows Server backup from the
-actions pane on the right-hand side of the screen select backup schedule
-helps you build a backup schedule through multiple steps where you first
-select the backup configuration if we select next we see we have full server or
-I could customise select next I get to select the backup time once a day or
-more than once a day and if it's more than once a day I can select what times
-I want select next we then get to determine where we want to store the
-backups once we determine where we tell Windows what disc we want to
-back up to and finally we confirm the process this is how easy it is to set up a
-new backup schedule you want to make sure you back up periodically add a
-set schedule so that you always know you have a good secondary copy of
-data available one of the most common flaws in a backup strategy is a clear
-procedure for restoring backup data when needed restoring a backup image is
-not always as easy as organisations may expect the process involves
-acquiring the correct backup image determine what parts need to be restored
-and then initiating the restore process all the steps depend on proper backup
-handling labeling and scoping of the restore process without proper planning
-and organisation may find themselves in a situation where restoring a
-complete backup takes many more hours than expected to avoid surprises
-after a catastrophic incident organisations must develop comprehensive
-restore plans and then test them any untested recovery plan is in and of itself
-a disaster waiting to happen
-==== C:/Users/Kassem Anis/OneDrive - Debreceni
-Egyetem/Asztal/HPOTest/videos/D4019.mp4 ====
-what are the primary tenets of cybersecurity is availability a disaster that
-interrupts operations is in effect and attack on availability implementing
-controls to reduce the risk of a disaster impacting operations is a crucial
-aspect to maintaining availability although the focus of cybersecurity controls
-is to protect against attack a disaster can be viewed as a specific category of
-attack one of the first layers of disaster controls are preventative controls
-preventive controls are controls that are designed to prevent and attack or
-incident from occurring in the case of a fire using fireproof materials when
-building a data center and prohibiting flammable contents or open flames
-"
-Page 16,"within the context of the data center can help prevent a fire further installing
-appropriate electrical circuits and periodically examining electrical cabling and
-electrical connections can reduce or prevent fires Started From electrical
-faults the next layer disaster controls are detective controls fires only one type
-of disaster in which damage increases dramatically as the event persists early
-detection of a fire is crucial to control damage and avoid a series incident from
-becoming a full-fledged disaster fire detection devices such as smoke
-detectors are a first line of Defense in fighting fires once a fire is detected the
-next line of Defense is a corrective control fire extinguishers provide the ability
-to respond or correct a fire that has been detected fire extinguishers exist in
-different classes to be used for different types of fires comprehensive disaster
-preparation should include all three types of controls for each identified
-disaster threat
+Page 7,"probability
+0
+1
+Seconds 
+probability
+CNN
+#27
+#130
+#139
+#205
+#270
+0
+1
+#27
+#130
+#139
+#205
+#270
+LRCN
+Original
+Original
+Fig. 6. Illustration of comparing CNN and LRCN on left eye of Trump video. LRCN exhibits more smooth and accurate results than CNN
+[28] K. He, X. Zhang, S. Ren, and J. Sun, “Deep residual learning for image
+recognition,” in CVPR, 2016, pp. 770–778.
+[29] K. Simonyan and A. Zisserman, “Very deep convolutional networks for
+large-scale image recognition,” arXiv preprint arXiv:1409.1556, 2014.
+[30] S. Hochreiter and J. Schmidhuber, “Long short-term memory,” Neural
+Comput., vol. 9, no. 8, pp. 1735–1780, Nov. 1997.
+[31] F. Song, X. Tan, X. Liu, and S. Chen, “Eyes closeness detection from
+still images with multi-scale histograms of principal oriented gradients,”
+Pattern Recognition, vol. 47, no. 9, pp. 2825–2838, 2014.
+[32] D. E. King, “Dlib-ml: A machine learning toolkit,” JMLR, vol. 10, pp.
+1755–1758, 2009.
+[33] D. P. Kingma and J. Ba, “Adam: A method for stochastic optimization,”
+arXiv preprint arXiv:1412.6980, 2014.
 "
