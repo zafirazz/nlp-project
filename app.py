@@ -3,7 +3,7 @@ import os
 import fitz
 import streamlit as st
 
-st.set_page_config(page_title="PDF Text Extractor", layout="wide")
+st.set_page_config(page_title="Notes organizer", layout="wide")
 
 UPLOAD_FOLDER = "static/uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
@@ -33,8 +33,8 @@ def extract_text_pdf(file, output_folder='data'):
     print(f"Extracted {csv_filepath}")
     return csv_filepath
 
-st.title("PDF Text Extractor")
-st.write("Upload a PDF file to extract its text into a CSV format.")
+st.title("Notes Organizer")
+st.write("Upload your Note.")
 
 uploaded_file = st.file_uploader("Choose a file", type=['pdf', 'txt', 'doc', 'docx'])
 
